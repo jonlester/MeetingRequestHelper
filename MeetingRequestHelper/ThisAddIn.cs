@@ -17,6 +17,10 @@ namespace MeetingRequestHelper
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
         }
+        protected override Office.IRibbonExtensibility CreateRibbonExtensibilityObject()
+        {
+            return new Ribbon();
+        }
 
         #region VSTO generated code
 

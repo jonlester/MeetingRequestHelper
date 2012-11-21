@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+    <ribbon>
+        <tabs>
+            <tab idMso="TabAppointment">
+                <group id="grpMeetingHelper" label="Meeting Helper" insertAfterMso="GroupShow">
+                    <button id="btn_AttachICal" imageMso="AttachFile" label="Attach iCal" size="large" onAction="AttachICal" 
+                            screentip="Create an iCalendar file for this appointment and attach it."
+                            supertip="Note: The file generated is based on the appointment at the time you click the button. If you make changes you must delete the attachment and re-add it."
+                            />
+                    <splitButton id="splitBtnTemplate" size="large">
+                        <button id="splitBtnTemplate__btn" imageMso="TextBoxInsert" label="Call Template" 
+                                onAction="ApplyTemplate" screentip="Insert basic teleconference information"
+                                />
+                        <menu id="splitBtnTemplate__mnu">
+                            <button id="btnApplyTemplate" label="Apply template" onAction="ApplyTemplate" 
+                                    screentip="Applies the current template to this appointment"
+                                    />
+                            <button id="btnSaveTemplate"  label="Save current as template" onAction="SaveTemplate" 
+                                    screentip="Save this meeting (location/body) as the new template"
+                                    />
+                        </menu>
+                    </splitButton>
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>
