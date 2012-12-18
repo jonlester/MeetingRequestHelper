@@ -35,8 +35,8 @@ namespace MeetingRequestHelper
     public class Ribbon : Office.IRibbonExtensibility
     {
         private Office.IRibbonUI ribbon;
-        private const string LOCATION_PATH = "MeetingRequestHelper\\Location.txt";
-        private const string TEMPLATE_PATH = "MeetingRequestHelper\\MeetingTemplate.rtf";
+        private string LOCATION_PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MeetingRequestHelper\\Location.txt");
+        private string TEMPLATE_PATH = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "MeetingRequestHelper\\MeetingTemplate.rtf");
 
         public Ribbon()
         {
